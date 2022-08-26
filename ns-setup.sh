@@ -35,11 +35,11 @@ echo "NS_DOMAIN=$domain" >> .env
 echo
 
 #secret=$(cat /proc/sys/kernel/random/uuid)
-echo "NS_SECRET=$secret" >> .env
+#echo "NS_SECRET=$secret" >> .env
 
 echo Придумайте API-серкет
 read secret
-
+echo "NS_SECRET=$secret" >> .env
 
 
 curl https://raw.githubusercontent.com/boshetyn/ns-setup/main/docker-compose.yml --output docker-compose.yml
