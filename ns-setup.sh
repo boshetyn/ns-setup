@@ -8,16 +8,12 @@ sudo apt-get -y install \
     gnupg \
     lsb-release
 
-#sudo mkdir -p /etc/apt/keyrings
-sudo mkdir -p /nstst003/keyrings
+sudo mkdir -p /etc/apt/keyrings
 
-#curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /nstst003/keyrings/docker.gpg
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 echo \
-#  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/nstst003/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-
-  $(lsb_release -cs) stable" | sudo tee /nstst003/sources.list.d/docker.list > /dev/null
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 sudo apt-get update
 sudo apt-get -y install docker-ce docker-ce-cli containerd.io docker-compose-plugin
@@ -38,8 +34,6 @@ read domain
 echo "NS_DOMAIN=$domain" >> .env
 echo
 
-#secret=$(cat /proc/sys/kernel/random/uuid)
-#echo "NS_SECRET=$secret" >> .env
 
 echo Придумайте API-серкет
 read secret
