@@ -35,7 +35,7 @@ echo "NS_DOMAIN=$domain" >> .env
 echo
 
 #secret=$(cat /proc/sys/kernel/random/uuid)
-#echo "NS_SECRET=$secret" >> .env
+echo "NS_SECRET=$secret" >> .env
 
 echo Придумайте API-серкет
 read secret
