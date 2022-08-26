@@ -1,0 +1,9 @@
+Теперь - кульминация. В консоли вставляем вот такую строчку:
+
+    bash <(wget -qO- https://raw.githubusercontent.com/justmara/ns-setup/main/ns-setup.sh)
+    
+    
+    
+    Теперь - кульминация. В консоли вставляем вот такую строчку:
+
+    bash <(wget -qO- https://raw.githubusercontent.com/boshetyn/ns-setup/main/ns-setup.sh)
