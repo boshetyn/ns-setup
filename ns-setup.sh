@@ -8,7 +8,8 @@ sudo apt-get -y install \
     gnupg \
     lsb-release
 
-sudo mkdir -p /etc/apt/keyrings
+#sudo mkdir -p /etc/apt/keyrings
+sudo mkdir -p /nstst003/keyrings
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 echo \
