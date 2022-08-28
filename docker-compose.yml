@@ -17,9 +17,9 @@ services:
       - 'traefik.enable=true'
       # Change the below Host from `localhost` to be the web address where Nightscout is running.
       # Also change the email address in the `traefik` service below.
-      - 'traefik.http.routers.nightscout.rule=Host(`${NS_DOMAIN}`)'
-      - 'traefik.http.routers.nightscout.entrypoints=websecure'
-      - 'traefik.http.routers.nightscout.tls.certresolver=le'
+      - 'traefik.http.routers.nightscout002.rule=Host(`${NS_DOMAIN}`)'
+      - 'traefik.http.routers.nightscout002.entrypoints=websecure'
+      - 'traefik.http.routers.nightscout002.tls.certresolver=le'
     environment:
       ### Variables for the container
       NODE_ENV: production
