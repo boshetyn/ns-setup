@@ -60,7 +60,7 @@ services:
 
   traefik:
     image: traefik:latest
-    container_name: 'traefik'
+    container_name: 'traefik002'
     restart: always
     command:
       - '--providers.docker=true'
