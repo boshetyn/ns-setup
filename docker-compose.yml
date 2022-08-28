@@ -9,7 +9,7 @@ services:
 
   nightscout:
     image: nightscout/cgm-remote-monitor:latest
-    container_name: nightscout002
+    container_name: nightscout003
     restart: always
     depends_on:
       - mongo
@@ -17,9 +17,9 @@ services:
       - 'traefik.enable=true'
       # Change the below Host from `localhost` to be the web address where Nightscout is running.
       # Also change the email address in the `traefik` service below.
-      - 'traefik.http.routers.nightscout002.rule=Host(`${NS_DOMAIN}`)'
-      - 'traefik.http.routers.nightscout002.entrypoints=websecure'
-      - 'traefik.http.routers.nightscout002.tls.certresolver=le'
+      - 'traefik.http.routers.nightscout003.rule=Host(`${NS_DOMAIN}`)'
+      - 'traefik.http.routers.nightscout003.entrypoints=websecure'
+      - 'traefik.http.routers.nightscout003.tls.certresolver=le'
     environment:
       ### Variables for the container
       NODE_ENV: production
@@ -60,7 +60,7 @@ services:
 
   traefik:
     image: traefik:latest
-    container_name: 'traefik002'
+    container_name: 'traefik003'
     restart: always
     command:
       - '--providers.docker=true'
