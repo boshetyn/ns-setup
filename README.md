@@ -11,3 +11,7 @@
 1. Зайт в консоль своей VPS
 2. вставить строку: `bash <(wget -qO- https://raw.githubusercontent.com/justmara/ns-setup/jino/ns-setup.sh)` нажать enter и следовать инструкциям
 3. ура, у вас есть найтскаут
+
+
+
+bash <(wget -qO- https://raw.githubusercontent.com/boshetyn/ns-setup/jino/ns-setup.sh)
